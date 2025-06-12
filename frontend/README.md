@@ -1,3 +1,18 @@
+# React + Vite + Tailwind CSS
+This project is ReactJS + Vite + Tailwind CSS based.
+
+## Steps to setup the frontend only.
+1. Follow steps in SETUP.md.
+2. cd into frontend. `cd frontend`
+3. Install dependencies. `npm install`
+4. Start the development server. `npm run dev`
+5. Open your browser and go to `http://localhost:5173/` to view the app.
+
+## (INCOMPLETE) Steps to setup the frontend and backend with Docker.
+1. Follow steps in SETUP.md.
+2. Run the docker compose command. `docker compose up -d`
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

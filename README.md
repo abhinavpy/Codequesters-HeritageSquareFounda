@@ -20,10 +20,10 @@
     Brief description of your project and its goals.
 
     ## Tech Stack
-    - Frontend: 
-    - Backend: 
-    - Database: 
-    - APIs: 
+    - Frontend: ReachJS, Vite, Tailwind CSS
+    - Backend: FastAPI, Python
+    - Database: Not Decided yet
+    - LLM APIs: LiteLLM, MCP etc.
     <!-- Add/modify as needed -->
 
 
