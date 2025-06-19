@@ -21,8 +21,8 @@ Heritage Square’s google drive is unorganized and difficult to find documents 
 * AI Agent can assist with finding documents and potentially suggest best ways to reorganize the drives.
 * AI Agent can add tags or labels to the documents based on high level categories provided. 
 * Once files are labeled, AI can suggest how to organize the files give specific parameters, ie. group by year/month and then sort by creation dates and then labels. 
-    * Actually move the files into above organized google shared drives. 
-    * Categories: 
+* Actually move the files into above organized google shared drives. 
+* Categories: 
     * Accounting
     * Curation
     * Development (contributed revenue generation)

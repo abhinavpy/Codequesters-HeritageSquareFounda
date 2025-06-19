@@ -1,0 +1,7 @@
+# ... other ignores
+.env
+venv/
+credentials.json
+token.json
+data/
+__pycache__/
