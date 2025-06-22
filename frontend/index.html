@@ -2,9 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Replace the default Vite favicon -->
+    <link rel="icon" type="image/webp" href="/square-phx.webp" />
+    
+    <!-- Add additional favicon formats for better compatibility -->
+    <link rel="icon" type="image/webp" sizes="32x32" href="/square-phx.webp" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="/square-phx.webp" />
+    
+    <!-- Apple Touch Icon for iOS devices -->
+    <link rel="apple-touch-icon" href="/square-phx.webp" />
+    
+    <!-- Android Chrome -->
+    <link rel="manifest" href="/manifest.json" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Heritage Square AI Assistant - Get instant answers about Heritage Square's history, tours, events, and facilities." />
+    <meta name="keywords" content="Heritage Square, AI Assistant, Phoenix, Museum, Tours, History" />
+    <meta name="author" content="Heritage Square Foundation" />
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Heritage Square AI Assistant" />
+    <meta property="og:description" content="Get instant answers about Heritage Square's history, tours, events, and facilities." />
+    <meta property="og:image" content="/square-phx.webp" />
+    <meta property="og:type" content="website" />
+    
+    <title>Heritage Square AI Assistant</title>
   </head>
   <body>
     <div id="root"></div>
