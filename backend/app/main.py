@@ -9,12 +9,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# --- Add this CORS middleware section ---
+# --- Update your CORS middleware section ---
 origins = [
     "http://localhost",
-    "http://localhost:5173", # The default port for Vite React projects
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
-    # Add any other origins you might use
+    "https://your-frontend-app-name.onrender.com", # <-- Add your production frontend URL
 ]
 
 app.add_middleware(
@@ -42,4 +42,12 @@ app.include_router(
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Heritage Square AI API"}
+    return {"message": "Heritage Square AI API is running"}
+
+# --- Add this new health check endpoint ---
+@app.get("/health", status_code=200)
+def health_check():
+    """
+    Simple health check endpoint for Render.
+    """
+    return {"status": "ok"}
