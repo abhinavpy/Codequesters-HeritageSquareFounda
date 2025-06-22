@@ -25,3 +25,4 @@ dist-ssr
 
 # include all env files
 .env
+.env*

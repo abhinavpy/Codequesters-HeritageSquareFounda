@@ -30,7 +30,10 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/v1/qa/ask', {
+      // Use the environment variable for the API URL
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/v1/qa/ask`;
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
