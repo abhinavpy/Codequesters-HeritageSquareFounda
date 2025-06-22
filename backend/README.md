@@ -3,7 +3,7 @@
 This is the backend service for the Heritage Square AI project. It is a FastAPI application that provides a RAG (Retrieval-Augmented Generation) pipeline. The service can ingest documents from a specified Google Drive folder, store them in a local vector database, and answer questions based on the ingested content using Google's Gemini models.
 
 ## Architecture Diagram
-![Architecture Diagram](https://raw.githubusercontent.com/Codequesters-HeritageSquareFounda/main/backend/Architecture_Diagram.png)
+![Architecture Diagram](https://raw.githubusercontent.com/2025-Arizona-Opportunity-Hack-Summer/Codequesters-HeritageSquareFounda/refs/heads/main/backend/Architecture_Diagram.png)
 
 ## Prerequisites
 

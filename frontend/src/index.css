@@ -1,2 +1,20 @@
-@import "tailwindcss";
+/* 1. Load Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
+/* 2. Import Tailwind’s entire framework */
+@import "tailwindcss";  /* bundles base, components, utilities */ 
+
+/* 3. Declare custom tokens with @theme */
+@theme {
+  --color-heritage-green:    #1A472A;
+  --color-heritage-off-white:#F3F0E9;
+  --color-heritage-gold:     #D4AF37;
+
+  --font-serif:  "Playfair Display", serif;
+  --font-sans:   "Lato", sans-serif;
+}
+
+/* 4. Apply base styles using your new theme utilities */
+body {
+  @apply bg-heritage-green font-sans text-heritage-off-white;
+}
