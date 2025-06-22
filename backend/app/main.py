@@ -14,7 +14,10 @@ origins = [
     "http://localhost",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://your-frontend-app-name.onrender.com", # <-- Add your production frontend URL
+    "https://your-frontend-app-name.onrender.com",
+    "https://codequestors.vercel.app/",
+    "https://codequestors-abhinav-usas-projects.vercel.app/",
+    "https://codequestors-git-main-abhinav-usas-projects.vercel.app/"  # <-- Add your production frontend URL
 ]
 
 app.add_middleware(
