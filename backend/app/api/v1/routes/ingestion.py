@@ -1,4 +1,5 @@
 import uuid
+from datetime import datetime, timezone
 from fastapi import APIRouter, BackgroundTasks, HTTPException, status
 
 from app.schemas.ingestion import IngestionRequest, IngestionResponse, JobStatus
@@ -40,4 +41,10 @@ def get_ingestion_status(job_id: str):
     job = job_statuses.get(job_id)
     if not job:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Job not found.")
+
+    # Compute elapsed_time dynamically if job is running
+    if job.get("start_time") and not job.get("end_time"):
+        start = datetime.fromisoformat(job["start_time"].replace("Z", "+00:00"))
+        now = datetime.now(timezone.utc)
+        job["elapsed_time"] = (now - start).total_seconds()
     return job

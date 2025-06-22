@@ -15,3 +15,7 @@ class IngestionResponse(BaseModel):
 class JobStatus(BaseModel):
     status: str
     details: Optional[str] = None
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+    elapsed_time: Optional[float] = None  # seconds
+    total_time: Optional[float] = None    # seconds

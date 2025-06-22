@@ -68,7 +68,11 @@ def sync_and_update_vector_store(drive_files, vector_store_path):
 
     # Load or create vector store
     if vector_store_path.exists():
-        vector_store = FAISS.load_local(str(vector_store_path), GoogleGenerativeAIEmbeddings(model="models/embedding-001"))
+        vector_store = FAISS.load_local(
+            str(vector_store_path),
+            GoogleGenerativeAIEmbeddings(model="models/embedding-001"),
+            allow_dangerous_deserialization=True  # <-- Add this argument
+        )
     else:
         vector_store = None
 
@@ -108,5 +112,9 @@ def sync_and_update_vector_store(drive_files, vector_store_path):
 
 def get_retriever(vector_store_path):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-    vector_store = FAISS.load_local(str(vector_store_path), embeddings)
+    vector_store = FAISS.load_local(
+        str(vector_store_path),
+        embeddings,
+        allow_dangerous_deserialization=True  # <-- Add this argument
+    )
     return vector_store.as_retriever()
