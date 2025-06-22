@@ -11,8 +11,12 @@ function App() {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
+    // Enhanced welcome message
     setMessages([
-      { sender: 'ai', text: 'Hello! I am the Heritage Square AI assistant. How can I help you today?' }
+      { 
+        sender: 'ai', 
+        text: 'Welcome to Heritage Square AI Assistant! 🏛️\n\nI can help you find information about Heritage Square\'s history, tours, events, and facilities. Please enter your Google Drive Folder ID above to get started.' 
+      }
     ]);
   }, []);
 
@@ -30,9 +34,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      // Use the environment variable for the API URL
       const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/v1/qa/ask`;
-
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -49,7 +51,10 @@ function App() {
 
     } catch (error) {
       console.error("Failed to get answer:", error);
-      const errorMessage = { sender: 'ai', text: "Sorry, I encountered an error. Please try again." };
+      const errorMessage = { 
+        sender: 'ai', 
+        text: "I apologize, but I encountered an error while processing your request. Please check your connection and try again. If the problem persists, please verify that your Google Drive Folder ID is correct." 
+      };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
@@ -57,7 +62,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-heritage-green font-sans">
+    <div className="flex flex-col h-screen bg-gradient-to-br from-heritage-green via-heritage-green to-heritage-green/90 font-sans">
       <Header
         driveFolderId={driveFolderId}
         setDriveFolderId={setDriveFolderId}
